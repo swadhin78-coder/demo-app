@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swadhin's Shop</title>
+  <link rel="stylesheet" href="./Assests/CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  
+  <!-- Header -->
+  <header>
+    <div class="logo">Swadhin's Shop</div>
+    <div class="menu-btn" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- Slider -->
+  <section class="slider">
+    <div class="slide fade">
+      <img src="./Assests/image/284-2849523_grocery-items-png-online-grocery-store-online-grocery.png" alt="Image 1">
+    </div>
+    <div class="slide fade">
+      <img src="./Assests/image/Grocery Store.jpg" alt="Image 2">
+    </div>
+    <div class="slide fade">
+      <img src="./Assests/image/istockphoto-1283712032-612x612.jpg" alt="Image 3">
+    </div>
+    <div class="slide fade">
+      <img src="./Assests/image/Masala-Chai-Tea-1.webp" alt="Image 4">
+    </div>
+    <div class="slide fade">
+      <img src="./Assests/image/istockphoto-171302954-612x612.jpg" alt="Image 5">
+    </div>
+  </section>
+
+  <!-- Sidebar -->
+  <nav id="sideMenu">
+    <ul>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Login -->
+    <div class="login-box">
+      <input type="password" id="ownerPass" placeholder="Owner Password">
+      <button onclick="checkLogin()">Login</button>
+    </div>
+  </nav>
+
+  <!-- Owner Panel -->
+  <div class="owner-panel">
+    <input type="text" id="newName" placeholder="Product Name">
+    <input type="number" id="newPrice" placeholder="Price">
+    <input type="number" id="newQty" placeholder="Qty">
+    <button class="btn save" onclick="addProduct()">Add Product</button>
+  </div>
+
+  <!-- Products -->
+  <h1 id="products">Available Products</h1>
+  <div class="products" id="productList"></div>
+
+  <!-- Invoice -->
+  <div id="invoice">
+    <h2>Invoice</h2>
+
+    <!-- Customer Info -->
+    <div class="customer-info">
+      <input type="text" id="custName" placeholder="Customer Name">
+      <input type="text" id="custNumber" placeholder="Phone Number">
+      
+    </div>
+
+    <div id="invoiceDetails"></div>
+    <button onclick="printInvoice()">🖨 Print</button>
+  </div>
+
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about-card">
+      <h2>About Us</h2>
+      <p>
+        Swadhin's Shop শুধু একটা দোকান নয়, এটা আপনার ভরসার নাম। 
+        আমরা সবসময় চেষ্টা করি আপনাকে সেরা মানের পণ্য সাশ্রয়ী দামে পৌঁছে দিতে। <br><br>
+        আমাদের লক্ষ্য হলো: <br>
+        💎 Quality First – প্রতিটি প্রোডাক্ট আমরা যত্ন নিয়ে বাছাই করি। <br>
+        ⚡ Fast Service – অল্প সময়ে আপনার দরজায় পৌঁছে দেওয়া।<br>
+        😊 Customer Happiness – আপনাদের সন্তুষ্টি প্রথম অগ্রাধিকার।<br><br>
+        আমরা বিশ্বাস করি, ব্যবসা শুধু কেনাবেচা নয়, বরং আস্থার সম্পর্ক। 
+        তাই Swadhin's Shop আপনার পাশে সবসময় থাকবে—ভালো প্রোডাক্ট, ভালো দাম, আর ভালো সার্ভিস নিয়ে।
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <div class="contact-icons">
+      <!-- Email -->
+      <a href="mailto:swadhink2020@gmail.com" class="icon">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <!-- Phone -->
+      <a href="tel:+8801961847110" class="icon">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Swadhin's Shop. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="./Assests/JS/Index.js"></script>
+</body>
+</html>

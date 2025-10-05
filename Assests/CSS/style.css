@@ -1,0 +1,220 @@
+   /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  min-height: 100vh;
+  color: #333;
+  padding-bottom: 50px;
+  line-height: 1.5;
+}
+/* Header */
+header {
+  width: 100%;
+  padding: 18px 50px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ff0606;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(255,255,255,0.8);
+  transition: transform 0.3s;
+}
+.logo:hover { transform: scale(1.05); }
+
+.slider {
+  max-width: 800px;
+  height: 600px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to   { opacity: 1; }
+}
+
+/* 3-dot menu */
+.menu-btn {
+  width: 32px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.menu-btn span {
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+.menu-btn:hover span {
+  background: #ffdd57;
+  box-shadow: 0 0 6px #ffdd57;
+}
+/* Sidebar */
+nav {
+  position: fixed;
+  right: -250px;
+  top: 0;
+  width: 220px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  padding-top: 100px;
+  transition: right 0.4s ease;
+}
+nav ul { list-style: none; display: flex; flex-direction: column; gap: 30px; padding-left: 25px; }
+nav ul li a { color: #fff; text-decoration: none; font-size: 18px; transition: 0.3s; }
+nav ul li a:hover { color: #ffdd57; text-shadow: 0 0 12px #ffdd57; }
+nav.active { right: 0; }
+/* Login */
+.login-box { text-align: center; margin: 30px 0; }
+.login-box input { padding: 10px 12px; border-radius: 8px; border: 1px solid #ccc; }
+.login-box button { margin-top: 10px; padding: 10px 18px; background: #1769aa; color: white; border-radius: 8px; }
+/* Owner Panel */
+.owner-panel { display: none; text-align: center; margin: 20px auto; max-width: 450px; background: #fff; padding: 20px; border-radius: 14px; }
+.owner-mode .owner-panel { display: block; }
+.owner-mode .owner-buttons { display: block; }
+/* Products */
+h1 { text-align: center; color: white; margin: 20px 0; }
+.products { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 25px; padding: 0 25px; }
+.product { background: #fff; padding: 18px; border-radius: 14px; text-align: center; }
+.product h3 { margin-bottom: 10px; }
+.price { color: #4CAF50; font-weight: bold; }
+.qty { color: #F57C00; font-weight: bold; }
+/* Buttons */
+.btn { padding: 8px 14px; border-radius: 8px; margin: 6px; cursor: pointer; }
+.add { background:#4CAF50; color:white; }
+.undo { background:#FF9800; color:white; }
+.save { background:#2196F3; color:white; }
+.delete { background:#F44336; color:white; }
+
+/* Invoice */
+#invoice { background:white; padding:20px; margin:80px auto; max-width:500px; border-radius:12px; display:none; }
+#invoice h2{ margin-bottom:10px; }
+
+/* About / Contact / Footer তোমার দেয়া CSS 그대로 */
+:root{ --accent-1:#FFD166; --accent-2:#f5447f; --bg-dark:#1e1e1e; --muted:#dcdcdc; }
+.about {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.about-card h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, #FFD166, #FF6B9A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-card p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.contact{background:#050000;color:#fff;padding:60px 10%;}
+.contact {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  color: white;
+}
+
+.contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact .icon {
+  font-size: 26px;
+  color: white;
+  background: rgba(255,255,255,0.1);
+  padding: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.contact .icon:hover {
+  background: white;
+  color: #1a2a6c;
+  transform: scale(1.2) rotate(10deg);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+
+.footer{background:#111;color:#ddd;padding:40px 10%;text-align:center;}
+  
